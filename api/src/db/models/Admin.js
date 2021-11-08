@@ -4,40 +4,39 @@ const adminSchema = new Schema({
   names: {
     type: String,
     require: true,
-    lowercase: true,
-    
-},
+    lowercase: true
+  },
   surnames: {
     type: String,
     require: true,
-    lowercase: true,
+    lowercase: true
   },
   email: {
     type: String,
     trim: true,
     require: true,
     unique: true,
-    lowercase: true,
+    lowercase: true
   },
   rol: {
-      admin:{
-        type: Boolean,
-        default: True,
-      },
-      teacher:{
-        type: Boolean,
-        default: false,
-      },
-      xy:{
-        type: Boolean,
-        default: false,
-      },
+    admin: {
+      type: Boolean,
+      default: true
+    },
+    teacher: {
+      type: Boolean,
+      default: false
+    },
+    xy: {
+      type: Boolean,
+      default: false
+    }
   },
   passwordHash: {
     type: String,
     require: true,
-    min :8,
-  },
+    min: 8
+  }
 })
 
 adminSchema.set('toJSON', {
