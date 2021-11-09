@@ -7,12 +7,6 @@ const foroSchema = new Schema ({
         require: true
     },
     
-    id_disscusion:{
-       type: String,
-       require: true
-    },
-
-
     text:{
         type: String,
         require: true
@@ -22,38 +16,39 @@ const foroSchema = new Schema ({
         timestamps:true
     },
 
-  Discussion:{
-        
-    question: {
-            type: boolean,
-            unique: true
+    Editor_WYSIWYG:{
+       type: Object
+    },
+    
+    tag:{
+     
+    anuncio:{
+      type: Boolean,
+      default : false
+    },
+    
+    question: {
+            type: Boolean,
+           
     },
     
     contributions:{
-            type: String,
-            unique: true
+            type: Boolean,
+            
     },
     
     challenges:{
-            type: String,
-            unique:true
+            type: Boolean,
+           
+    },
+    
+    Puntuation_system:{
+              type: Number,
+              default: 0
     },
 
     },
-
-    featured:{
-        type: String,
-        unique: true
-    },
-
-    Puntuation_system:{
-        type: Number,
-        default: 0
-    },
-
-    Editor_WYSIWYG:{
-        type: Object
-    },
+ 
 
 })
 

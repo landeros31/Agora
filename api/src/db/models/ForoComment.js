@@ -22,38 +22,31 @@ const foroSchema = new Schema ({
         timestamps:true
     },
 
-  Comment:{
-        
+    Editor_WYSIWYG:{
+       type: Object
+    },
+    
+    tag:{
+    
     question: {
-            type: boolean,
-            unique: true
+            type: Boolean,
     },
     
     contributions:{
-            type: String,
-            unique: true
+            type: Boolean,
     },
     
     challenges:{
-            type: String,
-            unique:true
+            type: Boolean,
+    },
+    
+    Puntuation_system:{
+              type: Number,
+              default: 0
     },
 
     },
-
-    featured:{
-        type: String,
-        unique: true
-    },
-
-    Puntuation_system:{
-        type: Number,
-        default: 0
-    },
-
-    Editor_WYSIWYG:{
-        type: Object
-    },
+ 
 
 })
 
