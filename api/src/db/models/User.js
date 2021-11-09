@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose')
 
-const adminSchema = new Schema({
+const userSchema = new Schema({
   firstName: {
         type: String,
         required: true,
@@ -28,20 +28,50 @@ const adminSchema = new Schema({
     unique: true,
     lowercase: true,
   },
+    contactNumber: {
+        type: Number,
+        required: true
+      },
+  img:{
+      type: String,
+      trim: true,
+  },
   rol: {
-      admin:{
+      candidate:{
         type: Boolean,
         default: true,
       },
-      teacher:{
+      student:{
         type: Boolean,
         default: false,
       },
-      xy:{
+      developer:{
         type: Boolean,
         default: false,
       },
   },
+  
+  programa:{
+    type : String,
+    default : "Programate"
+  },
+
+  cohorte:{
+      num:{
+        type : Number,
+        require: true
+      },
+      name:{
+        type : String,
+        require: true
+      }
+
+  },
+  estado:{
+      type: Boolean,
+      default : true
+  },
+
   passwordHash: {
     type: String,
     require: true,
@@ -49,7 +79,7 @@ const adminSchema = new Schema({
   },
 })
 
-adminSchema.set('toJSON', {
+userSchema.set('toJSON', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id
     delete returnedObject._id
@@ -58,6 +88,6 @@ adminSchema.set('toJSON', {
   }
 })
 
-const Admin = model('Admin', adminSchema)
+const User = model('User', userSchema)
 
-module.exports = Admin
+module.exports = User

@@ -1,4 +1,7 @@
 /////////////////////
+actualizar npm que sea mayor a 7.9
+
+
 -Ubicarse en la carpeta principal Agora
 -npm install (Esto instala los paquetes de api y client)
 

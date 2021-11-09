@@ -1,10 +1,7 @@
 const { Schema, model } = require('mongoose')
 
-const teachersSchema = new Schema({
-  username: {
-    type: String,
-    unique: true
-  },
+const teacherSchema = new Schema({
+  
   names:{
       type:String,
       trim:true,
@@ -46,7 +43,7 @@ rol:{
 },
 })
 
-teachersSchema.set('toJSON', {
+teacherSchema.set('toJSON', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id
     delete returnedObject._id
@@ -55,6 +52,6 @@ teachersSchema.set('toJSON', {
   }
 })
 
-const Teachers = model('Teachers', teachersSchema)
+const Teacher = model('Teachers', teacherSchema)
 
-module.exports = Teachers
+module.exports = Teacher
