@@ -17,14 +17,47 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: [true, "Please enter your password!"]
     },
+    middleName: {
+            type: String,
+            maxlength: 45
+    },
+    lastName: {
+            type: String,
+            maxlength: 45
+    },
+    secondSurname: {
+            type: String,
+            maxlength: 45
+    },
+    contactNumber: {
+            type: Number,
+    },
     role: {
         type: Number,
-        default: 0 // 0 = user, 1 = admin
+        default: 0 // 0 = aspirante, 1 = estudiante 2 = egresado, 3 = formador, 4 = admin  
     },
     avatar: {
         type: String,
         default: "https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png"
-    }
+    },
+    programa:{
+        type : String,
+        default : "Programate"
+      },
+    
+      cohorte:{
+          num:{
+            type : Number,
+          },
+          name:{
+            type : String,
+          }
+    
+      },
+      estado:{
+          type: Boolean,
+          default : true
+      },
 }, {
     timestamps: true
 })
