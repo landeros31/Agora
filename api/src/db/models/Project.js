@@ -9,11 +9,8 @@ const projectSchema = new Schema({
   img:{
     type:String,
     require:true,
-  },
-  date:{
-    timestamps:true
   }, 
-    id_teacher: {
+  id_teacher: {
     type: String,
     require: true,    
 },
@@ -91,11 +88,11 @@ const projectSchema = new Schema({
     type: String,
     require: true,
   },
-  entregables:{
+  deliver:{
     type: String,
     require: true,
   },
-  fecha_max_entrega:{
+  date_max_deliver:{
     type: Date,
     require: true,
   },
@@ -147,7 +144,9 @@ const projectSchema = new Schema({
       },
   },
   
-})
+},{    
+  timestamps:true
+});
 
 projectSchema.set('toJSON', {
   transform: (document, returnedObject) => {
