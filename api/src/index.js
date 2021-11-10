@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser')
 const fileUpload = require('express-fileupload')
 const path = require('path')
 const user = require('./routes/user')
+const project = require('./routes/projects')
 
 
 // Conection MongoDB
@@ -24,6 +25,7 @@ app.use(fileUpload({
 }))
 app.use(express.static('../client/build'))
 app.use('/api', user)
+app.use('/api/agora', project)
 
 
 // Setting

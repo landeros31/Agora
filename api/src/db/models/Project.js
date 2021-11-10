@@ -52,15 +52,12 @@ const projectSchema = new Schema({
   resources: {
      resource1:{
         type:String,
-        require: true,
      },
      resource2:{
         type:String,
-        require: true,
      },
      resource3:{
         type:String,
-        require: true,
      },
      resource4:{
         type:String,
@@ -94,7 +91,6 @@ const projectSchema = new Schema({
   },
   date_max_deliver:{
     type: Date,
-    require: true,
   },
 
   tags: {
