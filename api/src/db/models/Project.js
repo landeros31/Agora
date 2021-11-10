@@ -139,6 +139,15 @@ const projectSchema = new Schema({
         default: false
       },
   },
+  cohorte:{
+    num:{
+      type : Number,
+    },
+    name:{
+      type : String,
+    }
+
+  },
   
 },{    
   timestamps:true
