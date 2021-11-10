@@ -5,15 +5,10 @@ const projectSchema = new Schema({
   id_user:{
       type:String,  
   },
-   user_send:{
-    type:String,
-    require:true,
-  },
- 
-  name_Project :{
+  text: {
     type : String,
     require : true
-  }, 
+  },
     estado : {
         type : Boolean,
         default : true
