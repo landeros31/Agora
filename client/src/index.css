@@ -1,0 +1,36 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,500&family=Roboto:wght@400;700&family=Zen+Kaku+Gothic+Antique:wght@900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  a{
+    text-decoration: none;
+  }
+  ul{
+    list-style: none;
+  }
+  button{
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /* ----------------- Header ------------------- */
+  /* @import url("./components/header/header.css"); */
+  
+  /* ----------------- Auth ------------------- */
+  /* @import url("./components/body/auth/auth.css"); */
+  
+  /* ----------------- Profile ------------------- */
+  /* @import url("./components/body/profile/profile.css"); */
+
+  @import url("./pages/login/Login.css");
