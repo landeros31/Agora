@@ -1,0 +1,28 @@
+.card:hover {
+    box-shadow: 5px 10px 20px 1px #5c5b5a !important;
+    transition: all 0.5s linear;
+}
+
+.card-body {
+    padding: 1rem 0 !important;
+    background-color: #fff;
+    margin: 5px 6px;
+}
+.card-title {
+    color: #000;
+    font-size: 16px;
+    font-family: Roboto;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+.card-img-top {
+    transform: scale(0.7);
+    transition: all 0.2s ease-in-out;
+}
+
+.card-img-top:hover {
+    transform: scale(1.8);
+}

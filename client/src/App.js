@@ -1,11 +1,13 @@
-import React from 'react'
+import React from "react";
+import "./App.css";
+import Ecosistemas from "./components/views/ecosistema/Ecosistemas";
 
 const App = () => {
-  return (
-    <div>
-      si
-    </div>
-  )
-}
+    return (
+        <div className="App">
+            <Ecosistemas />
+        </div>
+    );
+};
 
-export default App
+export default App;
