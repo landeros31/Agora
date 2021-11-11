@@ -8,9 +8,9 @@ const {CLIENT_URL} = process.env
 const controllerUser = {
     register: async (req, res) => {
         try{
-            const {name, email, password} = req.body
+            const {name, email, password,middleName,lastName,secondSurname,contactNumber} = req.body
 
-            if(!name || !email || !password)
+            if(!name || !email || !password || !contactNumber ||!secondSurname || !lastName || !middleName)
                 return res.status(400).json({msg: "Please fill in all fields."})
 
             if(!validateEmail(email))
@@ -26,7 +26,12 @@ const controllerUser = {
             const passwordHash = await bcrypt.hash(password, 12)
 
             const newUser = {
-                name, email, passwordHash 
+                name, 
+                email, 
+                middleName,
+                lastName,
+                secondSurname,
+                contactNumber 
             }
 
             const activation_token = createActivationToken(newUser)
