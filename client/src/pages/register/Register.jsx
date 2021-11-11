@@ -16,7 +16,9 @@ import { Input } from '../../components/input/Input'
 
 const initialState = {
     name: '',
-    apellido: '',
+    middleName:'',
+    lastName: '',
+    secondSurname:'',
     telefono: '',
     email: '',
     password: '',
@@ -30,7 +32,9 @@ function Register() {
 
     const {
         name,
-        apellido,
+        middleName,
+        lastName,
+        secondSurname,
         telefono,
         email,
         password,
@@ -52,7 +56,19 @@ function Register() {
                 err: 'Please fill in all fields.',
                 success: ''
             })
-        if (isEmpty(apellido) || isEmpty(password))
+            if (isEmpty(middleName) || isEmpty(password))
+            return setUser({
+                ...user,
+                err: 'Please fill in all fields.',
+                success: ''
+            })
+        if (isEmpty(lastName) || isEmpty(password))
+            return setUser({
+                ...user,
+                err: 'Please fill in all fields.',
+                success: ''
+            })
+            if (isEmpty(secondSurname) || isEmpty(password))
             return setUser({
                 ...user,
                 err: 'Please fill in all fields.',
@@ -82,7 +98,9 @@ function Register() {
         try {
             const res = await axios.post('http://localhost:3005/api/register', {
                 name,
-                apellido,
+                middleName,
+                lastName,
+                secondSurname,
                 telefono,
                 email,
                 password
@@ -116,8 +134,8 @@ function Register() {
                             <Input
                                 label='Segundo nombre'
                                 placeholder="David"
-                                name='name'
-                                value={name}
+                                name='middleName'
+                                value={middleName}
                                 onChange={handleChangeInput}
                             />
                         </div>
@@ -125,15 +143,15 @@ function Register() {
                             <Input
                                 label='Primer apellido'
                                 placeholder="Perez"
-                                name='apellido'
-                                value={apellido}
+                                name='lastName'
+                                value={lastName}
                                 onChange={handleChangeInput}
                             />
                             <Input
                                 label='Segundo apellido'
                                 placeholder="Diaz"
-                                name='apellido'
-                                value={apellido}
+                                name='secondSurname'
+                                value={secondSurname}
                                 onChange={handleChangeInput}
                             />
                         </div>
