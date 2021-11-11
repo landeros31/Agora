@@ -10,11 +10,11 @@ const annuncieSchema = new Schema({
     require:true,
   },
  
-  name_Project :{
+  name_annuncie :{
     type : String,
     require : true
   }, 
-    estado : {
+    state : {  //////////mostar o no el anuncio
         type : Boolean,
         default : true
     }

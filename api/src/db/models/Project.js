@@ -20,55 +20,39 @@ const projectSchema = new Schema({
   },
   outcome: {
       outcome1:{
-          type: Boolean,
-          default: false
+          type: Number,  ////0=nada 1 = nivel1    2= nivel 2     3=nivel3   
+          default: 0
 
       },
       outcome2:{
-        type: Boolean,
-        default: false
+        type: Number,  ////0=nada 1 = nivel1    2= nivel 2     3=nivel3   
+        default: 0
 
     },
     outcome3:{
-        type: Boolean,
-        default: false
+      type: Number,  ////0=nada 1 = nivel1    2= nivel 2     3=nivel3   
+      default: 0
 
     },
     outcome4:{
-        type: Boolean,
-        default: false
+      type: Number,  ////0=nada 1 = nivel1    2= nivel 2     3=nivel3   
+      default: 0
 
     }, outcome5:{
-        type: Boolean,
-        default: false
+      type: Number,  ////0=nada 1 = nivel1    2= nivel 2     3=nivel3   
+      default: 0
 
     }, outcome6:{
-        type: Boolean,
-        default: false
+      type: Number,  ////0=nada 1 = nivel1    2= nivel 2     3=nivel3   
+      default: 0
 
     },
     
   },
   resources: {
-     resource1:{
-        type:String,
-     },
-     resource2:{
-        type:String,
-     },
-     resource3:{
-        type:String,
-     },
-     resource4:{
-        type:String,
-     },
-     resource5:{
-        type:String,
-     },
-     resource6:{
-        type:String,
-     },
+    type: Array
   },
+  
   context:{
     type: String,
     require: true,
@@ -94,50 +78,7 @@ const projectSchema = new Schema({
   },
 
   tags: {
-      html5 :{
-        type : Boolean,
-        default: false
-      },
-      css3 :{
-        type : Boolean,
-        default: false
-      },
-       javascript:{
-        type : Boolean,
-        default: false
-      },
-      react :{
-        type : Boolean,
-        default: false
-      },
-      angular :{
-        type : Boolean,
-        default: false
-      },
-      boostrap :{
-        type : Boolean,
-        default: false
-      },
-      flex :{
-        type : Boolean,
-        default: false
-      },
-      git :{
-        type : Boolean,
-        default: false
-      },
-      mysql :{
-        type : Boolean,
-        default: false
-      },
-      mongodb :{
-        type : Boolean,
-        default: false
-      },
-      ux_ui :{
-        type : Boolean,
-        default: false
-      },
+    type: Array
   },
   cohorte:{
     num:{

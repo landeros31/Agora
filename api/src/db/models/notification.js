@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose')
 
-const projectSchema = new Schema({
+const notificationSchema = new Schema({
 
   id_user:{
       type:String,  
@@ -9,14 +9,14 @@ const projectSchema = new Schema({
     type : String,
     require : true
   },
-    estado : {
+    estado : {  ////////mostrar o no mostrar notificacion
         type : Boolean,
         default : true
     }
 
 })
 
-projectSchema.set('toJSON', {
+notificationSchema.set('toJSON', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id
     delete returnedObject._id
@@ -24,6 +24,6 @@ projectSchema.set('toJSON', {
   }
 })
 
-const Project = model('Project', projectSchema)
+const Notification = model('Notification', notificationSchema)
 
-module.exports = Project
+module.exports = Notification
