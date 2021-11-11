@@ -55,16 +55,16 @@ function Login() {
                 <form className="form" onSubmit={handleSubmit}>
                     <div className='login-form-content'>
                         <Input
-                            label='Email Address'
-                            placeholder="Enter email address"
+                            label='Correo'
+                            placeholder="Luis@hotmail.com"
                             name="email"
                             value={email}
                             onChange={handleChangeInput}
                         />
                         <Input
-                            type="password"
-                            label='Password'
-                            placeholder="Enter Password"
+                            type="Password"
+                            label='Contraseña'
+                            placeholder="********"
                             name="password"
                             value={password}
                             onChange={handleChangeInput}
