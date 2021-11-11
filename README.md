@@ -20,9 +20,24 @@ actualizar npm que sea mayor a 7.9
 
 /////nota
 
+
 no es necesario trabajar desde la carpeta principal cada grupo puede trabajar en la carpeta client o api segun sus requerimientos
 
 
+///RUTAS DEL FRONT
 
+LOGIN
 
+/// http://localhost:3000/login
 
+REGISTRO
+
+/// http://localhost:3000/register
+
+OLVIDAR CONTRASEÑA
+
+/// http://localhost:3000/forgot_password
+
+CAMBIAR CONTRASEÑA
+
+/// http://localhost:3000/user/activate/reset_password/:activation_token
