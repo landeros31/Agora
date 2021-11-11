@@ -24,7 +24,7 @@ actualizar npm que sea mayor a 7.9
 no es necesario trabajar desde la carpeta principal cada grupo puede trabajar en la carpeta client o api segun sus requerimientos
 
 
-////RUTAS DEL FRONT
+//RUTAS DEL FRONT
 
 LOGIN
 
