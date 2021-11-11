@@ -16,6 +16,7 @@ const controllerAnnuncie = {
                     name_annuncie,
                     estado
                     
+                    
                   })
                 
                   const savedAnnuncie = await annuncie.save()
