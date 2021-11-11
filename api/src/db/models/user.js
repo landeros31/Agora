@@ -1,74 +1,76 @@
 const mongoose = require('mongoose')
 
-
-const userSchema = new mongoose.Schema({
+const userSchema = new mongoose.Schema(
+  {
     name: {
-        type: String,
-        required: [true, "Please enter your name!"],
-        trim: true
+      type: String,
+      required: [true, 'Please enter your name!'],
+      trim: true
     },
     email: {
-        type: String,
-        required: [true, "Please enter your email!"],
-        trim: true,
-        unique: true
+      type: String,
+      required: [true, 'Please enter your email!'],
+      trim: true,
+      unique: true
     },
     passwordHash: {
-        type: String,
-        required: [true, "Please enter your password!"]
+      type: String,
+      required: [true, 'Please enter your password!']
     },
     middleName: {
-            type: String,
-            maxlength: 45
+      type: String,
+      maxlength: 45
     },
     lastName: {
-            type: String,
-            maxlength: 45
+      type: String,
+      maxlength: 45
     },
     secondSurname: {
-            type: String,
-            maxlength: 45
+      type: String,
+      maxlength: 45
     },
     contactNumber: {
-            type: Number,
+      type: Number
     },
     role: {
-        type: Number,
-        default: 0 // 0 = aspirante, 1 = estudiante 2 = egresado, 3 = formador, 4 = admin  
+      type: Number,
+      default: 0 // 0 = aspirante, 1 = estudiante 2 = egresado, 3 = formador, 4 = admin
     },
     avatar: {
-        type: String,
-        default: "https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png"
+      type: String,
+      default:
+        'https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png'
     },
-    programa:{
-        type : String,
-        default : "Programate"
+    programa: {
+      type: String,
+      default: 'Programate'
+    },
+
+    cohorte: {
+      num: {
+        type: Number
       },
-    
-      cohorte:{
-          num:{
-            type : Number,
-          },
-          name:{
-            type : String,
-          }
-    
-      },
-      estado:{
-          type: Boolean,
-          default : true
-      },
-}, {
+      name: {
+        type: String
+      }
+    },
+    estado: {
+      type: Boolean,
+      default: true
+    }
+  },
+  {
     timestamps: true
-})
+  }
+)
 
 userSchema.set('toJSON', {
-    transform: (document, returnedObject) => {
-      returnedObject.id = returnedObject._id
-      delete returnedObject._id
-      delete returnedObject.__v
-      delete returnedObject.passwordHash
-    }
-  })
-  
-module.exports = mongoose.model("User", userSchema)
+  transform: (document, returnedObject) => {
+    returnedObject.id = returnedObject._id
+    delete returnedObject._id
+    delete returnedObject.__v
+    delete returnedObject.passwordHash
+  }
+})
+
+module.exports = mongoose.model('User', userSchema)
