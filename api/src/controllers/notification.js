@@ -3,18 +3,30 @@ const Notification = require('../db/models/notification')
 
 const controllerNotification = {
     /*updateState*/
+    updateState: async (req, res) => {
+        try {
+            const {state,id_notification} = req.body
+            await Notification.findOneAndUpdate({_id: id_notification}, {
+                state
+            })
+
+            res.json({msg: "Update Success!"})
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
 
     create: async (req, res) => {
         try{
-            const {id_user, text, estado} = req.body
+            const {id_user, text, state} = req.body
 
-            if(!id_user || !text || !estado)
+            if(!id_user || !text || !state)
                 return res.status(400).json({msg: "Please fill in all fields."})
             
                 const notification = new Notification({
                     id_user,
                     text,
-                    estado
+                    state
                     
                 })
 

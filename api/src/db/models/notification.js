@@ -9,7 +9,7 @@ const notificationSchema = new Schema({
     type : String,
     require : true
   },
-    estado : {
+    state : {
         type : Boolean,
         default : true
     }
