@@ -44,7 +44,7 @@ const Viewproject = () => {
             </div>
             <div className="containers">
                 <h2>Fecha de entrega</h2>
-                <p>xx/xx/</p>
+                <p>xx/xx/xx</p>
             </div>
         </div>
     );
