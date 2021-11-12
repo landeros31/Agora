@@ -33,20 +33,14 @@ const userSchema = new mongoose.Schema(
       type: Number
     },
     role: {
-<<<<<<< HEAD
         type: Number,
         default: 0 // 0 = aspirante, 1 = estudiante 2 = egresado, 3 = formador, 4 = mentor 5=monitor 6=entrevistador 7=observador 8=entreobservador =admin 
-=======
-      type: Number,
-      default: 0 // 0 = aspirante, 1 = estudiante 2 = egresado, 3 = formador, 4 = admin
->>>>>>> frontApi
     },
     avatar: {
       type: String,
       default:
         'https://res.cloudinary.com/devatchannel/image/upload/v1602752402/avatar/avatar_cugq40.png'
     },
-<<<<<<< HEAD
     program:{
         type : String,
         default : "Programate"
@@ -64,20 +58,7 @@ const userSchema = new mongoose.Schema(
       state:{   ///habilitarlo
           type: Boolean,
           default : true
-=======
-    programa: {
-      type: String,
-      default: 'Programate'
-    },
-
-    cohorte: {
-      num: {
-        type: Number
->>>>>>> frontApi
-      },
-      name: {
-        type: String
-      }
+    
     },
     estado: {
       type: Boolean,
