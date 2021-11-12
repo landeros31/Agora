@@ -8,9 +8,10 @@ const { CLIENT_URL } = process.env
 const controllerUser = {
   register: async (req, res) => {
     try {
-      const { name, email, password } = req.body
+      console.log(req.body)
+      const { name, email, password, middleName , lastName, secondSurname , contactNumber } = req.body
 
-      if (!name || !email || !password)
+      if (!name || !email || !password || !lastName || !contactNumber )
         return res.status(400).json({ msg: 'Please fill in all fields.' })
 
       if (!validateEmail(email))
@@ -30,8 +31,13 @@ const controllerUser = {
 
       const newUser = {
         name,
+        middleName,
         email,
-        passwordHash
+        passwordHash,
+        lastName,
+        secondSurname,
+        contactNumber
+        
       }
 
       const activation_token = createActivationToken(newUser)
@@ -54,7 +60,7 @@ const controllerUser = {
         process.env.ACTIVATION_TOKEN_SECRET
       )
 
-      const { name, email, passwordHash } = user
+      const { name, email, passwordHash,middleName,lastName,secondSurname,contactNumber } = user
 
       const check = await User.findOne({ email })
       if (check)
@@ -63,7 +69,12 @@ const controllerUser = {
       const newUser = new User({
         name,
         email,
-        passwordHash
+        passwordHash,
+        middleName,
+        lastName,
+        secondSurname,
+        contactNumber
+
       })
 
       await newUser.save()

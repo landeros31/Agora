@@ -49,9 +49,11 @@ const userSchema = new mongoose.Schema(
       cohorte:{
           num:{
             type : Number,
+            default : 2
           },
           name:{
             type : String,
+            default :"cohorte 2 la mejor cohorte!!!!! "
           }
     
       },
@@ -60,10 +62,6 @@ const userSchema = new mongoose.Schema(
           default : true
     
     },
-    estado: {
-      type: Boolean,
-      default: true
-    }
   },
   {
     timestamps: true
