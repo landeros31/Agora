@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    padding-top: 5%;
+    margin: 0% 5%;
+    background-color: #f0f0f0;
+}
+
+/*button {
+
+    width: 6em;
+    height: 2em;
+    background-color: #FFCC02;
+    border-radius: 10px;
+    color: #010101;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+
+}
+
+.container-one {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+button:hover {
+    background-color: black;
+    color: #FFCC02;
+}*/
+
+.containers {
+    background-color: #fff;
+    width: 67%;
+}
+
+
+h1 {
+    text-align: left;
+    margin-left: 3%;
+    font-size: 30px;
+}
+
+img {
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    width: 93%;
+    height: 320px;
+    padding: 30px;
+}
+
+h2 {
+    text-align: left;
+    padding: 30px 30px 0px;
+}
+
+p {
+    text-align: left;
+    padding: 0 30px 30px;
+    font-size: 17;
+    font-weight: 400;
+    line-height: 160%;
+}
+
+@media (max-width: 1059px) {
+
+    h1 {
+        text-align: left;
+        margin: 24px;
+    }
+
+    img {
+        width: 91%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    img {
+        width:87%;
+        height: 50%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    img {
+        width: 85%;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    img {
+        width: 82%;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    p {
+        font-size: 17px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 360px) {
+
+        img {
+            width:75%;
+            height: 50%;
+        }
+
+        h1 {
+            font-size: 20px;
+        }
+
+        p {
+            font-size: 12px;
+        }
+
+        h2 {
+            font-size: 17px;
+        }
+}

@@ -1,9 +1,10 @@
 import React from 'react'
+import Viewprojects from './components/views/viewproject/Viewproject'
 
 const App = () => {
   return (
     <div>
-      si f
+      < Viewprojects/>
     </div>
   )
 }
