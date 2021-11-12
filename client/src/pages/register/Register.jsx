@@ -19,7 +19,7 @@ const initialState = {
     middleName:'',
     lastName: '',
     secondSurname:'',
-    telefono: '',
+    contactNumber: '',
     email: '',
     password: '',
     cf_password: '',
@@ -35,7 +35,7 @@ function Register() {
         middleName,
         lastName,
         secondSurname,
-        telefono,
+        contactNumber,
         email,
         password,
         cf_password,
@@ -78,7 +78,7 @@ function Register() {
         if (!isEmail(email))
             return setUser({ ...user, err: 'Invalid emails.', success: '' })
 
-        if (isLength(telefono))
+        if (isLength(contactNumber))
             return setUser({
                 ...user,
                 err: 'telefono must be at least 10 characters.',
@@ -101,7 +101,7 @@ function Register() {
                 middleName,
                 lastName,
                 secondSurname,
-                telefono,
+                contactNumber,
                 email,
                 password
             })
@@ -182,8 +182,8 @@ function Register() {
                             <Input
                                 label='Telefono'
                                 placeholder="+57 313 300 300"
-                                name='telefono'
-                                value={telefono}
+                                name='contactNumber'
+                                value={contactNumber}
                                 onChange={handleChangeInput}
                             />
                         </div>
