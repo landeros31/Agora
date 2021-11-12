@@ -11,7 +11,7 @@ const controllerUser = {
       const { name, email, password,middleName,lastName,secondSurname,contactNumber
       } = req.body
 
-      if (!name || !email || !password || !middleName || !lastName || !secondSurname || !contactNumber
+      if (!name || !email || !password ||  !lastName  || !contactNumber
         )
         return res.status(400).json({ msg: 'Please fill in all fields.' })
 
@@ -61,7 +61,8 @@ const controllerUser = {
         process.env.ACTIVATION_TOKEN_SECRET
       )
 
-      const { name, email, passwordHash } = user
+      const { name, email, passwordHash,middleName,lastName,secondSurname,contactNumber
+      } = user
 
       const check = await User.findOne({ email })
       if (check)
@@ -70,7 +71,12 @@ const controllerUser = {
       const newUser = new User({
         name,
         email,
-        passwordHash
+        passwordHash,
+        middleName,
+        lastName,
+        secondSurname,
+        contactNumber
+
       })
 
       await newUser.save()
