@@ -1,3 +1,4 @@
+import React from "react";
 import './Input.css';
 
 export const Input = ({ value = '', type = 'text', onChange = () => { }, placeholder = '',
@@ -13,5 +14,6 @@ export const Input = ({ value = '', type = 'text', onChange = () => { }, placeho
                 name={name}
                 onChange={onChange} />
         </div>
+        
     )
 }

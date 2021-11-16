@@ -4,7 +4,7 @@ import { Button } from "react-bootstrap";
 export default function ResourceRow({ resource, index, removeResource }) {
   return (
     <div className="resourceCard">
-      <a href={resource.link} target="_blank" rel="noreferrer">
+      <a href={resource.link} target="_blank" rel="noopener noreferrer">
         {resource.link}
       </a>
       <div>
