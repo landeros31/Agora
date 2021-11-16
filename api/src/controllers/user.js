@@ -11,7 +11,8 @@ const controllerUser = {
       console.log(req.body)
       const { name, email, password, middleName , lastName, secondSurname , contactNumber } = req.body
 
-      if (!name || !email || !password || !lastName || !contactNumber )
+      if (!name || !email || !password ||  !lastName  || !contactNumber
+        )
         return res.status(400).json({ msg: 'Please fill in all fields.' })
 
       if (!validateEmail(email))
@@ -60,7 +61,8 @@ const controllerUser = {
         process.env.ACTIVATION_TOKEN_SECRET
       )
 
-      const { name, email, passwordHash,middleName,lastName,secondSurname,contactNumber } = user
+      const { name, email, passwordHash,middleName,lastName,secondSurname,contactNumber
+      } = user
 
       const check = await User.findOne({ email })
       if (check)
