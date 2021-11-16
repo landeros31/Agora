@@ -22,7 +22,7 @@ const ViewAnnounce = () => {
                 <hr />
             </div><div className="container-comment">
                 <img src={img} className="image-comment" /><p className="name-comment">Laura Melissa Gonzales Suesca</p>
-                <p className="comment">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam commodi expedita consequuntur eius, adipisci tempore! Odit nostrum possimus deserunt quod at. Nostrum obcaecati ea suscipit sed delectus dolorem qui magni?</p>
+                <p className="comment">Lorem ipsum, sit amet consectetur adipisicing elit. Veniam commodi expedita consequuntur eius, adipisci tempore! Odit nostrum possimus deserunt quod at. Nostrum obcaecati ea suscipit sed delectus dolorem qui magni?</p>
                 <hr />
             </div>
             <div className="container-comment">
