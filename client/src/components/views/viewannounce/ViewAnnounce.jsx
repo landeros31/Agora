@@ -1,5 +1,5 @@
 import React from 'react';
-import "../viewannounce/ViewAnnounce.jsx";
+import "./ViewAnnounce.jsx";
 import img from "../../../../assets/static/cara.jpg"
 
 const ViewAnnounce = () => {
