@@ -93,7 +93,7 @@ function Register() {
             })
 
         if (!isMatch(password, cf_password))
-            return setUser({ ...user, err: 'Password did not match.', success: '' })
+            return setUser({ ...user, err: 'Password did not match..', success: '' })
 
         try {
             const res = await axios.post('http://localhost:3005/api/register', {

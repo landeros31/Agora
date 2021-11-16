@@ -6,7 +6,7 @@ import ActivationEmail from './pages/activation-email/ActivationEmail'
 import Login from "./pages/login/Login";
 import ForgotPassword from "./pages/forgotPassword/ForgotPassword";
 import ResetPassword from "./pages/resetPassword/ResetPassword";
-function App() {
+ function App() {
   return (
     <Router>
       <Routes>
@@ -19,6 +19,8 @@ function App() {
           exact
         />
         <Route path="/forgot_password" element={<ForgotPassword />} exact />
+         
+
       </Routes>
     </Router>
   );
