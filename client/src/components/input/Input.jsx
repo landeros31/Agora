@@ -1,3 +1,4 @@
+import React from "react";
 import './Input.css';
 
 export const Input = ({ value = '', type = 'text', onChange = () => { }, placeholder = '',
