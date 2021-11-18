@@ -2,52 +2,27 @@ const { Schema, model } = require('mongoose')
 
 const projectSchema = new Schema({
 
-  project_name:{
+  name:{
       type:String,
       require:true,
   },
-  img:{
+  picture:{
     type:String,
     require:true,
-  }, 
+  },
+  competenceFramework:{
+    type : String
+  },
   id_teacher: {
     type: String,
-    require: true,    
+    /* require: true, */    
 },
   description: {
     type: String,
     require: true,
   },
-  outcome: {
-      outcome1:{
-          type: Number,  ////0=nada 1 = nivel1    2= nivel 2     3=nivel3   
-          default: 0
-
-      },
-      outcome2:{
-        type: Number,  ////0=nada 1 = nivel1    2= nivel 2     3=nivel3   
-        default: 0
-
-    },
-    outcome3:{
-      type: Number,  ////0=nada 1 = nivel1    2= nivel 2     3=nivel3   
-      default: 0
-
-    },
-    outcome4:{
-      type: Number,  ////0=nada 1 = nivel1    2= nivel 2     3=nivel3   
-      default: 0
-
-    }, outcome5:{
-      type: Number,  ////0=nada 1 = nivel1    2= nivel 2     3=nivel3   
-      default: 0
-
-    }, outcome6:{
-      type: Number,  ////0=nada 1 = nivel1    2= nivel 2     3=nivel3   
-      default: 0
-
-    },
-    
+  competencies: {
+    type: Array
   },
   resources: {
     type: Array
@@ -57,23 +32,23 @@ const projectSchema = new Schema({
     type: String,
     require: true,
   },
-  pedagogical_modalities : {
+  pedagogyModality : {
     type: String,
     require: true,
   },
-  performance_criteria : {
+  performance : {
     type: String,
     require: true,
   },
-  evaluation_modality : {
+  evaluationModality : {
     type: String,
     require: true,
   },
-  deliver:{
+  deliverables:{
     type: String,
     require: true,
   },
-  date_max_deliver:{
+  date:{
     type: Date,
   },
 

@@ -4,25 +4,26 @@ const Project = require('../db/models/Project')
 const controllerProject = {
     create: async (req, res) => {
         try{
-            const {project_name,img,id_teacher,date_max_deliver,description,outcome,resources,context,pedagogical_modalities,performance_criteria,evaluation_modality,deliver,tags,cohorte} = req.body
+            const {name,picture,id_teacher,date,description,competenceFramework,competencies,resources,context,pedagogyModality,performance,evaluationModality,deliverables,tags,cohorte} = req.body
 
-            if(!project_name || !img || !id_teacher || !description || !context || !pedagogical_modalities || !performance_criteria || !evaluation_modality || !deliver || !cohorte )
+            if(!name || !description || !context )
                 return res.status(400).json({msg: "Please fill in all fields."})
             
                 const project = new Project({
-                    project_name,
-                    img,
+                    name,
+                    picture,
                     id_teacher,
-                    date_max_deliver,
+                    date,
                     description,
+                    competenceFramework,
                     cohorte,
-                    outcome,
+                    competencies,
                     resources,
                     context,
-                    pedagogical_modalities,
-                    performance_criteria,
-                    evaluation_modality,
-                    deliver,
+                    pedagogyModality,
+                    performance,
+                    evaluationModality,
+                    deliverables,
                     tags
                     
                   })
