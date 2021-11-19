@@ -32,6 +32,11 @@ const userSchema = new mongoose.Schema(
     contactNumber: {
       type: Number
     },
+    badges: {
+      type: Array,
+      default : ["true","false","false"]
+      },
+
     role: {
         type: Number,
         default: 0 // 0 = aspirante, 1 = estudiante 2 = egresado, 3 = formador, 4 = mentor 5=monitor 6=entrevistador 7=observador 8=entreobservador =admin 
@@ -61,9 +66,8 @@ const userSchema = new mongoose.Schema(
           type: Boolean,
           default : true
       },
-      
-      
     },
+      
   {
     timestamps: true
   }
