@@ -1,22 +1,27 @@
 const { Schema, model } = require('mongoose')
 
-const notificationSchema = new Schema({
+const annuncieSchema = new Schema({
 
   id_user:{
       type:String,  
   },
-  text: {
+   text:{
+    type:String,
+    require:true,
+  },
+ 
+  name_annuncie :{
     type : String,
     require : true
-  },
-    estado : {  ////////mostrar o no mostrar notificacion
+  }, 
+    state : {  //////////mostar o no el anuncio
         type : Boolean,
         default : true
     }
 
 })
 
-notificationSchema.set('toJSON', {
+annuncieSchema.set('toJSON', {
   transform: (document, returnedObject) => {
     returnedObject.id = returnedObject._id
     delete returnedObject._id
@@ -24,6 +29,6 @@ notificationSchema.set('toJSON', {
   }
 })
 
-const Notification = model('Notification', notificationSchema)
+const Annuncie = model('Annuncie', annuncieSchema)
 
-module.exports = Notification
+module.exports = Annuncie

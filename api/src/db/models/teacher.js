@@ -55,3 +55,4 @@ teacherSchema.set('toJSON', {
 const Teacher = model('Teachers', teacherSchema)
 
 module.exports = Teacher
+
