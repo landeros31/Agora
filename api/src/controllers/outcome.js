@@ -26,8 +26,9 @@ const controllerOutcome = {
     },
 
     getOutcome: async (req, res) => {
+        const {id_deliverie} = req.body
         try {
-            const outcome = await Outcome.find({})
+            const outcome = await Outcome.find({id_deliverie})
             
             res.json(outcome)
         } catch (err) {
