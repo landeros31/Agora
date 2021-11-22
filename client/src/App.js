@@ -1,14 +1,26 @@
 import React from "react";
-import Footer from "./components/views/projects/Footer.jsx";
-import Header from "./components/views/projects/Header.jsx";
+import Cardproject from "./components/views/projects/projectsvalidate/cardprojects/Cardproject";
 
-const App = () => {
+
+
+//import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom"
+
+import Feedback from "./components/views/projects/projectsvalidate/feedbackprojects/FeedbackProjects";
+
+  
+
+function App() {
   return (
-    <>
-      <Header />
-      <Footer />
+      <>
+
+   
+    <Feedback/>
+
+ 
+       
+       
     </>
   );
-};
+}
 
 export default App;

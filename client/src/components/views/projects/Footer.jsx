@@ -1,5 +1,5 @@
 import React from "react";
-import logosWhite from "../../../assets/static/logosWhite.png";
+//import logosWhite from "../../assets/static/logosWhite.png";
 
 import "./headerFooterStyles.css";
 
@@ -34,7 +34,7 @@ export default function Footer() {
           </div>
 
           <div className="LogosFooterContainer">
-            <img src={logosWhite} alt="Programate-LogoBlanco" />
+            <img src="" alt="Programate-LogoBlanco" />
           </div>
         </div>
       </footer>
