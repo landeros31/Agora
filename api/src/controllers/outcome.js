@@ -26,7 +26,7 @@ const controllerOutcome = {
     },
 
     getOutcome: async (req, res) => {
-        const {id_deliverie} = req.body
+        const {id_deliverie} = req.params
         try {
             const outcome = await Outcome.find({id_deliverie})
             
@@ -36,9 +36,10 @@ const controllerOutcome = {
         }
     },
     updateOutcome: async (req, res) => {
+        const {id_deliverie} = req.params
         try {
-            const {id_outcome, outcomes} = req.body
-            await Outcome.findOneAndUpdate({_id : id_outcome}, {
+            const {outcomes} = req.body
+            await Outcome.findOneAndUpdate({id_deliverie : id_deliverie}, {
                 outcomes
             })
 

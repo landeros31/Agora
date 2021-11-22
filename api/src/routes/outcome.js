@@ -4,8 +4,8 @@ const controllerOutcome = require('../controllers/outcome')
 
 
 router.post('/new-outcome', controllerOutcome.create)
-router.get('/get-outcome', controllerOutcome.getOutcome)
-router.patch('/update-outcome',controllerOutcome.updateOutcome)
+router.get('/get-outcome/:id_deliverie', controllerOutcome.getOutcome)
+router.patch('/update-outcome/:id_deliverie',controllerOutcome.updateOutcome)
 
 
 
