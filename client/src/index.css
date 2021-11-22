@@ -1,5 +1,5 @@
 
-  @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,500&family=Roboto:wght@400;700&family=Zen+Kaku+Gothic+Antique:wght@900&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 * {
   margin: 0;
@@ -34,3 +34,4 @@
   /* @import url("./components/body/profile/profile.css"); */
 
   @import url("./pages/login/Login.css");
+
