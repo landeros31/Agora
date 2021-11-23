@@ -10,6 +10,10 @@ const outcomeSchema = new Schema ({
     type: Array,
     require: true,
 },
+result: {
+  type: Array,
+  require: true,
+},
 })
 
 outcomeSchema.set('toJSON', {

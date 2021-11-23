@@ -38,9 +38,9 @@ const controllerOutcome = {
     updateOutcome: async (req, res) => {
         const {id_deliverie} = req.params
         try {
-            const {outcomes} = req.body
+            const {result} = req.body
             await Outcome.findOneAndUpdate({id_deliverie : id_deliverie}, {
-                outcomes
+                result
             })
 
             res.json({msg: "Update Success!"})
