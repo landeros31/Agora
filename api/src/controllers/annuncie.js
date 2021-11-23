@@ -15,8 +15,7 @@ const controllerAnnuncie = {
                     textAnnouncement,
                     titleAnnouncement,
                     estado
-                    
-                    
+                                       
                   })
                 
                   const savedAnnuncie = await annuncie.save()
@@ -27,7 +26,7 @@ const controllerAnnuncie = {
             return res.status(500).json({msg: err.message})
         }
     },
-
+// no tenemos que traer esto por cohorte????
     getAnnuncies: async (req, res) => {
         try {
             const annuncies = await Annuncie.find({})

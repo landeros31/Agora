@@ -21,6 +21,8 @@ router.get('/all_info', auth, authAdmin, controllerUser.getUsersAllInfor)
 
 router.get('/logout', controllerUser.logout)
 
+router.get('/badge', controllerUser.getBadges)
+
 router.patch('/update', auth, controllerUser.updateUser)
 
 router.patch(
@@ -29,7 +31,11 @@ router.patch(
   authAdmin,
   controllerUser.updateUsersRole
 )
-
+router.patch(
+  '/update_badge/:id',
+  
+  controllerUser.updateBadge
+)
 router.delete('/delete/:id', auth, authAdmin, controllerUser.deleteUser)
 
 module.exports = router

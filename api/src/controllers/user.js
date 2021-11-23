@@ -178,6 +178,17 @@ const controllerUser = {
       return res.status(500).json({ msg: err.message })
     }
   },
+  getBadges: async (req, res) => {
+    try {
+      const users = await User.find().select(['name','badges'])
+      
+
+
+      res.json(users)
+    } catch (err) {
+      return res.status(500).json({ msg: err.message })
+    }
+  },
   logout: async (req, res) => {
     try {
       res.clearCookie('refreshtoken', { path: '/api/refresh_token' })
@@ -202,6 +213,24 @@ const controllerUser = {
       return res.status(500).json({ msg: err.message })
     }
   },
+  updateBadge: async (req, res) => {
+    try {
+      const { badges } = req.body
+
+      await User.findOneAndUpdate(
+        { _id: req.params.id },
+        {
+          badges
+        }
+      )
+
+      res.json({ msg: 'Update Success!' })
+    } catch (err) {
+      return res.status(500).json({ msg: err.message })
+    }
+  },
+ 
+  
   updateUsersRole: async (req, res) => {
     try {
       const { role } = req.body
@@ -218,6 +247,7 @@ const controllerUser = {
       return res.status(500).json({ msg: err.message })
     }
   },
+  
   deleteUser: async (req, res) => {
     try {
       await User.findByIdAndDelete(req.params.id)
