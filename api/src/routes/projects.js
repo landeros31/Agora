@@ -5,7 +5,7 @@ const controllerProject = require('../controllers/projects')
 
 router.post('/new-project', controllerProject.create)
 router.get('/get-projects', controllerProject.getProjects)
-router.get('/get-one-project', controllerProject.getOneProject)
+router.get('/get-one-project/:id', controllerProject.getOneProject)
 
 
 
