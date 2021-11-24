@@ -44,7 +44,6 @@ const controllerDeleverie = {
         try {
             const { id_user } = req.body
             const deliverie = await Deliverie.find({ id_user })
-            
             res.json(deliverie)
         } catch (err) {
             return res.status(500).json({msg: err.message})

@@ -5,15 +5,20 @@ const outcomeSchema = new Schema ({
     id_deliverie:{
         type: String,
         require: true,
-      },
-  outcomes: {
-    type: Array,
-    require: true,
-},
+    },
+    outcomes: {
+      type: Array,
+      require: true,
+    },
     result: {
       type: Array,
       require: true,
     },
+    cohorte:{
+        type : Number,
+        default : 2
+  },
+
 })
 
 outcomeSchema.set('toJSON', {
