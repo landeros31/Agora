@@ -180,7 +180,7 @@ const controllerUser = {
   },
   getBadges: async (req, res) => {
     try {
-      const users = await User.find().select(['name','badges'])
+      const users = await User.find().select(['name','lastName','badges'])
       
 
 
