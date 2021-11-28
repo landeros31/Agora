@@ -2,14 +2,13 @@ require('dotenv').config()
 const express = require('express')
 const morgan = require('morgan')
 const cors = require('cors')
-const cookieParser = require('cookie-parser')
 const fileUpload = require('express-fileupload')
 const path = require('path')
 const user = require('./routes/user')
 const project = require('./routes/projects')
 const annuncie = require('./routes/annuncie')
-const outcome = require('./routes/outcome')
 const deliverie = require('./routes/deliverie')
+const outcome = require('./routes/outcome')
 
 
 
@@ -23,17 +22,16 @@ const app = express()
 app.use(cors())
 app.use(express.json())
 app.use(morgan('dev'))
-app.use(cookieParser())
+
 app.use(fileUpload({
     useTempFiles: true
 }))
-app.use(express.static('../client/build'))
+app.use(express.static('../frontendagora/build'))
 app.use('/api', user)
 app.use('/api/agora', project)
 app.use('/api/agora', annuncie)
 app.use('/api/agora', outcome)
 app.use('/api/agora', deliverie)
-
 
 
 // Setting

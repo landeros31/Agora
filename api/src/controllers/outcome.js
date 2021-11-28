@@ -1,5 +1,5 @@
+const Deliverie = require('../db/models/deliverie')
 const Outcome = require('../db/models/outcome')
-
 
 const controllerOutcome = {
     create: async (req, res) => {
@@ -13,7 +13,6 @@ const controllerOutcome = {
                     
                     outcomes,
                     id_deliverie,
-                    cohorte,
 
                   })
                 
@@ -36,6 +35,19 @@ const controllerOutcome = {
             return res.status(500).json({msg: err.message})
         }
     },
+    updateOutcome: async (req, res) => {
+        const {id_deliverie} = req.params
+        try {
+            const {result} = req.body
+            await Outcome.findOneAndUpdate({id_deliverie : id_deliverie}, {
+                result
+            })
+
+            res.json({msg: "Update Success!"})
+        } catch (err) {
+            return res.status(500).json({msg: err.message})
+        }
+    },
     getOutcomeDash: async (req, res) => {
         const {cohorte} = req.params
         try {
@@ -46,23 +58,7 @@ const controllerOutcome = {
             return res.status(500).json({msg: err.message})
         }
     },
-    updateOutcome: async (req, res) => {
-        const {id_deliverie} = req.params
-        try {
-            const {result,cohorte} = req.body
-
-            await Outcome.findOneAndUpdate({id_deliverie : id_deliverie}, {
-                result,
-                cohorte
-            })
-
-            res.json({msg: "Update Success!"})
-        } catch (err) {
-            return res.status(500).json({msg: err.message})
-        }
-    },
  
 }
-    
 
 module.exports = controllerOutcome

@@ -1,4 +1,5 @@
 const router = require('express').Router()
+const auth = require('../middleware/auth')
 const controllerProject = require('../controllers/projects')
 
 

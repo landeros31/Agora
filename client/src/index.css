@@ -1,37 +1,28 @@
-
-  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
 
 * {
+  font-family: "Roboto", sans-serif;
+  padding: 0px;
   margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
 }
-  
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-      monospace;
-  }
-  a{
-    text-decoration: none;
-  }
-  ul{
-    list-style: none;
-  }
-  button{
-    border: none;
-    outline: none;
-    cursor: pointer;
-  }
-  
-  /* ----------------- Header ------------------- */
-  /* @import url("./components/header/header.css"); */
-  
-  /* ----------------- Auth ------------------- */
-  /* @import url("./components/body/auth/auth.css"); */
-  
-  /* ----------------- Profile ------------------- */
-  /* @import url("./components/body/profile/profile.css"); */
+body {
+  background: #fbfbfb;
+}
 
-  @import url("./pages/login/Login.css");
+i {
+  font-size: 20px;
+  cursor: pointer;
+}
 
+i:hover {
+  color: #ffc107;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  margin-bottom: 0;
+}

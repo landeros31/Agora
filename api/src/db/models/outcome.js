@@ -3,22 +3,23 @@ const { Schema, model } = require('mongoose')
 const outcomeSchema = new Schema ({
 
     id_deliverie:{
-        type: String,
-        require: true,
-    },
-    outcomes: {
-      type: Array,
+      type: Schema.Types.ObjectId,
+      ref: 'Deliverie',
       require: true,
-    },
+      },
+      
+  outcomes: {
+    type: Array,
+    require: true,
+},
     result: {
       type: Array,
       require: true,
     },
     cohorte:{
-        type : Number,
-        default : 2
-  },
-
+      type : Number,
+      default : 2
+},
 })
 
 outcomeSchema.set('toJSON', {
